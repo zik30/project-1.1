@@ -80,4 +80,4 @@ resetBtn.onclick = () =>{
     clearInterval(timer)
     count = 0
     timeBlock.innerHTML = count
-}
+}gi

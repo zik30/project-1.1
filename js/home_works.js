@@ -64,11 +64,12 @@ let count = 0
 var timer
 
 startBtn.onclick = () => {
-
-    timer = setInterval(() => {
-        count++
-        timeBlock.innerHTML = count
-    }, 1000)
+    if(!timer) {
+        timer = setInterval(() => {
+            count++
+            timeBlock.innerHTML = count
+        }, 1000)
+    }
 }
 
 stoptBtn.onclick = () =>{
@@ -80,4 +81,4 @@ resetBtn.onclick = () =>{
     clearInterval(timer)
     count = 0
     timeBlock.innerHTML = count
-}gi
+}

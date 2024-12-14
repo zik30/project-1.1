@@ -1,0 +1,32 @@
+.character {
+    width: 300px;
+    height: 400px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+.characters_inner{
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    align-items: center;
+    color: white;
+}
+.img{
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+.wrapper{
+    background-color: #252525;
+}

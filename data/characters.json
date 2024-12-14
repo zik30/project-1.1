@@ -1,0 +1,26 @@
+[
+  {
+    "person_photo": "url('https://upload.wikimedia.org/wikipedia/en/thumb/d/d7/Harry_Potter_character_poster.jpg/220px-Harry_Potter_character_poster.jpg')",
+    "name": "Harry Potter",
+    "age": 18,
+    "Department": "Gryffindor"
+  },
+  {
+    "person_photo": "url('https://i.pinimg.com/736x/42/27/43/4227431118ce1a34832d43a8125a1b13.jpg')",
+    "name": "Drako Malfoy",
+    "age": 18,
+    "Department": "Slytherin"
+  },
+  {
+    "person_photo": "url('https://desprookjeswinkel.be/cdn/shop/collections/a9eb785494e8b16a03466c83393bdf8f.jpg?v=1626268962')",
+    "name": "Cedric Diggory",
+    "age": 18,
+    "Department": "Hufflepuff"
+  },
+  {
+    "person_photo": "url('https://i.pinimg.com/550x/13/c0/4a/13c04ae3fce56eb6837382af23124714.jpg')",
+    "name": "Luna Lovegood",
+    "age": 18,
+    "Department": "Ravenclaw"
+  }
+]

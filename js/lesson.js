@@ -59,3 +59,44 @@ itemsParent.onclick = (event)=>{
         })
     }
 }
+
+
+
+// todo  CONVERTER
+
+const somInput = document.querySelector('#som');
+const usdInput = document.querySelector('#usd');
+const eurInput = document.querySelector('#eur');
+
+
+const converter = (element, targetElement1, targetElement2) => {
+    element.oninput =() => {
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET', '../data/converter.json');
+        xhr.setRequestHeader('Content-type', 'application/json')
+        xhr.send()
+
+        xhr.onload = () => {
+            const data = JSON.parse(xhr.response)
+            if (targetElement1.id ==="som" && targetElement2.id ==="eur") {
+                targetElement1.value = (element.value*data.usd).toFixed(2);
+                targetElement2.value = (targetElement1.value/data.eur).toFixed(2);
+            }
+            if (targetElement1.id ==="usd" && targetElement2.id === "eur") {
+                targetElement1.value = (element.value/data.usd).toFixed(2);
+                targetElement2.value = (element.value/data.eur).toFixed(2);
+            }
+            if(targetElement1.id ==="usd" && targetElement2.id === "som") {
+                targetElement2.value = (element.value * data.eur).toFixed(2);
+                targetElement1.value = (targetElement2.value / data.usd).toFixed(2);
+            }
+            if (element.value === "") {
+                targetElement1.value ="";
+                targetElement2.value ="";
+            }
+        }
+    }
+}
+converter(usdInput, somInput, eurInput);
+converter(somInput, usdInput, eurInput);
+converter(eurInput, usdInput, somInput);
